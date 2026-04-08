@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joni Haarala Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
       <i class="fas fa-user"></i>
     </div>
     <h1>Joni Haarala</h1>
-    <p>Fullstack Developer</p>
+    <p>Full Stack Developer</p>
     <ul class="nav-links">
       <li><a href="#home" class="scroll-link active" data-letter="H">Home</a></li>
       <li><a href="#about" class="scroll-link" data-letter="A">About</a></li>
@@ -48,14 +48,16 @@
   <section id="home" class="content-section">
     <div class="hero-container">
       <div id="hero-text-1" class="hero-swap active">
-        <h1>Hi!<br>I'm Joni</h1>
+        <h1>Hi, I'm Joni</h1>
+        <p>Full Stack Developer based in Tampere.</p>
         <a href="#" class="hero-button" onclick="showComingSoon(event)">
           <span>Download CV</span>
           <i class="fa-solid fa-download"></i>
         </a>
       </div>
       <div id="hero-text-2" class="hero-swap">
-        <h1>I am<br>a Fullstack Developer</h1>
+        <h1>Building scalable, secure,<br>and user-centric web applications</h1>
+        <p>With a focus on Cloud-Native technologies.</p>
         <a href="#experience" class="hero-button">
           <span>View Portfolio</span>
           <i class="fa-solid fa-briefcase"></i>
@@ -66,7 +68,8 @@
 
   <section id="about" class="content-section reveal fade-slide">
     <h2>About</h2>
-    <p>As a Full Stack Developer based in Finland, I bring a comprehensive approach to web development. I'm driven by a genuine passion for crafting end-to-end web solutions that are both highly accessible and demonstrably user-friendly, ensuring a superior experience for all users.</p>
+    <h3>From Infrastructure to Code</h3>
+    <p>I have a diverse background in technical infrastructure and industrial operations, which has shaped my logical approach to problem-solving. Today, I combine that get-it-done mindset with modern software development, focusing on React, Node.js, and Cloud Security.</p>
   </section>
 
   <section id="services" class="content-section">
@@ -119,12 +122,14 @@
         <ul>
           <li><strong>Project Planning</strong> – Budgeting, scheduling, and resource allocation.</li>
           <li><strong>Site Engineering</strong> – Construction site management and safety protocols.</li>
-          <li><strong>Basic House Construction Course Content:</strong></li>
-          <ul>
-            <li><strong>Foundation & Site Preparation</strong> – Groundwork, excavation, and laying foundations.</li>
-            <li><strong>Structural Framework</strong> – Walls, floors, and roof construction.</li>
-            <li><strong>Building Codes & Safety Regulations</strong> – Compliance with construction standards.</li>
-          </ul>
+          <li>
+            <strong>Basic House Construction Course Content:</strong>
+            <ul>
+              <li><strong>Foundation & Site Preparation</strong> – Groundwork, excavation, and laying foundations.</li>
+              <li><strong>Structural Framework</strong> – Walls, floors, and roof construction.</li>
+              <li><strong>Building Codes & Safety Regulations</strong> – Compliance with construction standards.</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -143,20 +148,38 @@
       <div id="skills-tab" class="tab-content active">
         <div class="skills-table">
           <div class="skill-category">
-            <h3>Front-end</h3>
+            <h3>Frontend</h3>
             <div class="skill-tags">
               <a href="https://react.dev/" target="_blank" class="skill-tag">React</a>
               <a href="https://nextjs.org/" target="_blank" class="skill-tag">Next.js</a>
-              <a href="https://tailwindcss.com/" target="_blank" class="skill-tag">Tailwind</a>
               <a href="https://www.typescriptlang.org/" target="_blank" class="skill-tag">TypeScript</a>
+              <a href="https://tailwindcss.com/" target="_blank" class="skill-tag">Tailwind CSS</a>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Back-end</h3>
+            <h3>Backend</h3>
             <div class="skill-tags">
               <a href="https://nodejs.org/" target="_blank" class="skill-tag">Node.js</a>
+              <a href="https://laravel.com/" target="_blank" class="skill-tag">PHP (Laravel)</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" class="skill-tag">Python (FastAPI)</a>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <div class="skill-tags">
               <a href="https://www.postgresql.org/" target="_blank" class="skill-tag">PostgreSQL</a>
               <a href="https://www.prisma.io/" target="_blank" class="skill-tag">Prisma ORM</a>
+              <a href="https://orm.drizzle.team/" target="_blank" class="skill-tag">Drizzle</a>
+              <a href="https://www.mongodb.com/" target="_blank" class="skill-tag">MongoDB</a>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>DevOps & Cloud</h3>
+            <div class="skill-tags">
+              <a href="https://www.docker.com/" target="_blank" class="skill-tag">Docker</a>
+              <a href="https://kubernetes.io/" target="_blank" class="skill-tag">Kubernetes</a>
+              <a href="https://www.linux.org/" target="_blank" class="skill-tag">Linux</a>
+              <a href="https://git-scm.com/" target="_blank" class="skill-tag">Git</a>
             </div>
           </div>
         </div>
@@ -166,9 +189,17 @@
         <div class="grid-cards">
           <div class="service-card">
             <h3>FileConPro</h3>
-            <p>Professional file conversion tool with modern UI and multiple format support</p>
+            <p>Professional file conversion tool with modern UI and multiple format support.</p>
             <a href="https://fileconpro.xyz/" target="_blank" class="hero-button">
               <span>FileConPro</span>
+              <i class="fa-solid fa-file-arrow-up"></i>
+            </a>
+          </div>
+          <div class="service-card">
+            <h3>Open Source SDK Development</h3>
+            <p>Internship project at i4ware Software. Focused on building and maintaining SDKs with PHP and Python, integrating AI/ML capabilities, and working in an Agile environment.</p>
+            <a href="https://i4ware.fi/" target="_blank" class="hero-button">
+              <span>i4ware Software</span>
               <i class="fa-solid fa-file-arrow-up"></i>
             </a>
           </div>
@@ -220,6 +251,18 @@
 
   <div class="footer">
     <p>&copy; by Joni Haarala</p>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="service-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <div id="modal-body"></div>
+    </div>
   </div>
 
   <script src="index.js"></script>

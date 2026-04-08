@@ -98,11 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // === Hero text swap ===
   let current = 0;
   const swapElements = document.querySelectorAll('.hero-swap');
-  setInterval(() => {
-    swapElements.forEach((el) => el.classList.remove('active'));
-    current = (current + 1) % swapElements.length;
-    swapElements[current].classList.add('active');
-  }, 8000);
+  if (swapElements.length > 1) {
+    setInterval(() => {
+      swapElements.forEach((el) => el.classList.remove('active'));
+      current = (current + 1) % swapElements.length;
+      swapElements[current].classList.add('active');
+    }, 8000);
+  }
 
   // === Smooth scroll to section ===
   document.querySelectorAll('.scroll-link').forEach(link => {
@@ -130,10 +132,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPos = window.pageYOffset;
 
     // Update back to top button
-    if (scrollPos > 300) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
+    if (backToTopBtn) {
+      if (scrollPos > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
     }
 
     // Update active navigation link
@@ -166,17 +170,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, { passive: true });
 
-  document.querySelectorAll('.feature-card').forEach(card => {
-    revealObserver.observe(card);
-  });
+  handleScroll();
 
 // === Back to Top Button Click Handler ===
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
+}
 
 // === Service Modal ===
 const modal = document.getElementById('service-modal');
@@ -252,40 +256,46 @@ const serviceDetails = {
   }
 };
 
-// Open modal when service card is clicked
-document.querySelectorAll('.service-card-clickable').forEach(card => {
-  card.addEventListener('click', () => {
-    const serviceType = card.getAttribute('data-service');
-    const service = serviceDetails[serviceType];
-
-    modalTitle.textContent = service.title;
-    modalBody.innerHTML = service.content;
-    modal.classList.add('show');
-    document.body.style.overflow = 'hidden';
-  });
-});
-
 // Close modal when X is clicked
-modalClose.addEventListener('click', () => {
-  modal.classList.remove('show');
-  document.body.style.overflow = 'auto';
-});
-
-// Close modal when clicking outside
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+if (modal && modalTitle && modalBody && modalClose) {
+  modalClose.addEventListener('click', () => {
     modal.classList.remove('show');
     document.body.style.overflow = 'auto';
-  }
-});
+  });
 
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('show')) {
-    modal.classList.remove('show');
-    document.body.style.overflow = 'auto';
-  }
-});
+  // Close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Open modal when service card is clicked
+  document.querySelectorAll('.service-card-clickable').forEach(card => {
+    card.addEventListener('click', () => {
+      const serviceType = card.getAttribute('data-service');
+      const service = serviceDetails[serviceType];
+
+      if (!service) {
+        return;
+      }
+
+      modalTitle.textContent = service.title;
+      modalBody.innerHTML = service.content;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+}
 
 // === Tab Switching ===
 const tabButtons = document.querySelectorAll('.tab-button');

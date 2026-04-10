@@ -1,19 +1,35 @@
-# automatic-succotash
+# Joni Haarala Portfolio
 
-Portfolio
+Personal portfolio website for presenting my background, skills, and selected work.
 
-Tämä on henkilökohtainen portfolio-sivusto, jossa esittelen taitojani, projektejani ja taustani.
+## Overview
 
-## Sisältö
+This project is a static portfolio site built with HTML, CSS, and JavaScript. It highlights my profile as a Full Stack Developer and includes sections for about, services, education, experience, blog, and contact information.
 
-- **Etusivu**: Yleiskatsaus ja yhteystiedot
-- **Tietoja**: Taustani ja tarinani
-- **Taidot**: Tekniset taitoni ja niiden tasot
-- **Portfolio**: Esittelen projektejani
-- **Blogi**: Julkaisuja ja pohdintoja
-- **Yhteystiedot**: Yhteydenottolomake
+## Live Site
 
+- Portfolio: [https://johadv.github.io/](https://johadv.github.io/)
 
-## Portfolio
+## Project Highlights
 
-- **Verkkokauppa**: https://jmthdev.github.io/Portfolio/react-verkkokauppa/
+- Personal portfolio homepage
+- Service and skills presentation
+- Education and experience sections
+- Contact section for reaching out
+- Additional project examples included in the repository
+
+## Main Sections
+
+- Home
+- About
+- Services
+- Education
+- Experience
+- Blog
+- Contact
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript

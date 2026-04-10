@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".scroll-link");
   const backToTopBtn = document.getElementById('back-to-top');
+  const contactForm = document.querySelector('.contact-form');
 
   let scrollTicking = false;
 
@@ -171,6 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { passive: true });
 
   handleScroll();
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('This feature is not available yet. Please contact me directly by email.');
+    });
+  }
 
 // === Back to Top Button Click Handler ===
 if (backToTopBtn) {

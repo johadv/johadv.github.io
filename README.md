@@ -1,4 +1,4 @@
-# Joni Haarala Portfolio
+# My Site
 
 Personal portfolio website for presenting my background, skills, and selected work.
 

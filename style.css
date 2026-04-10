@@ -1004,6 +1004,17 @@ body.dark .button-metal:hover {
   color: #fff;
 }
 
+.contact-note {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5f6b7a;
+}
+
+body.dark .contact-note {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* === FOOTER === */
 .footer {
   margin-left: 260px;
